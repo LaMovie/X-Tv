@@ -1,0 +1,289 @@
+<!DOCTYPE HTML>
+<HTML Lang="en">
+<head>
+    <meta charset="UFT-8">
+    <meta http-equiv="X-UA-Compatible" contect="IE=edge">
+    <meta name="viewport" contect="width=device-width, initial-scale=1.0">
+    <title>Reproductor HLS</title>
+    <!-- Incluir la biblioteca de Video.js -->
+    <link href="https://vjs.zencdn.net/8.5.2/video-js.css" rel="stylesheet">
+    <script src="https://vjs.zencdn.net/8.5.2/video.min.js"></script>
+    <!-- HLS para Video.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.15.0/videojs-contrib-hls.min.js"></script>  
+<style>
+body{
+    position: fixed;
+   background: black;
+   font-family: sans-sarif;
+}
+#Grid {
+    gap: 10px;
+    height: 50vh;
+    display: grid;
+    overflow-y: auto;
+    flex-direction: column;
+    grid-template-columns: repeat(4, 1fr);
+}
+.contenedor{
+    margin-top: 5vh;
+    margin-left: -1vh;       
+}
+.contenedor img{
+    width: 100%;
+    height: 80%;
+    background: orange;
+    transition: 1.5s;
+    border-radius: 20px;
+}
+.contenedor img:hover{    
+    transform: scale(2) perspective(500px)rotateY(50deg);
+    padding-left: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 0 30px black;
+    border: 2px solid green;  
+    transition: 1s;  
+}  
+:root {
+    --primary : linear-gradient(to bottom right, #0a0057, #3f00ee);
+    --secondary : gold;
+    --text : #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@media screen and (max-width: 990px) {
+.contenedor {
+        grid-template-columns: 1fr;
+ }
+}
+#Vid {
+    width: 100%;
+    margin-top: 3vh;    
+    height: 30vh;
+    border-radius: 10px;       
+}
+h6 {
+    color: #4f9;
+    opacity: .7;
+    font-weight: bold;
+}
+</style>
+
+<style>body{-webkit-animation:puff-in-hor 1s cubic-bezier(.47,0,.745,.715) both;animation:puff-in-hor 1.5s cubic-bezier(.47,0,.745,.715) both}@-webkit-keyframes puff-in-hor{0%{-webkit-transform:scaleX(2);transform:scaleX(2);-webkit-filter:blur(4px);filter:blur(4px);opacity:0}100%{-webkit-transform:scaleX(1);transform:scaleX(1);-webkit-filter:blur(0px);filter:blur(0px);opacity:1}}@keyframes puff-in-hor{0%{-webkit-transform:scaleX(2);transform:scaleX(2);-webkit-filter:blur(4px);filter:blur(4px);opacity:0}100%{-webkit-transform:scaleX(1);transform:scaleX(1);-webkit-filter:blur(0px);filter:blur(0px);opacity:1}}</style>
+</head>
+<body>      
+             <center>
+         <div id="All">
+  <video
+        id="Vid"
+        class="video-js vjs-default-skin"
+        controls
+        preload="auto"
+        width="640"
+        height="360"
+        data-setup='{}' src="https://imagenuniversaltv.net:3771/live/iutvlive.m3u8" type="application/x-mpegURL">
+    </video></div><br/>
+     <h6 id="H">UNIVERSAL</h6>
+    <div class="contenedor">
+       <div id="Grid">
+<a href="go:MARVEL"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg6f4gnYtPs39988KvXRfBkNNeiz3xJLZl57ki8O6Ue29eJuD9QL9GF-erXXMKIXLF5bKITqU5GpuQtgzeeQjclWx3qIWDvIEGy26CreJqf5hxYGLq_K76vKcIRjJ4MNHr99KJP9rrZj3MpZOnXDXeNM6AMCsEM_DuDIlTiPNbyaBSR2RDNux5tr4oVlA/s400/image_search_1732114018487.jpg" alt="MARVEL"/></a>
+
+   <div onclick='playVideo("http://masterprotv1.com/live/3683max3688/pa665ss090/325.m3u8")'><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjhJgsKcb2jamGpeE3-X5EzFbGYtGQA35gE-JTFPIaQrSoIJEk6BWIz9-vQLpL8XljlPU52KBC2eQBWlxxQEZWxhm_iK3Q6AKu7TO0jVUgnT3kXojVwy4iv_cTTA1_3Nn21CNslOjVbT1HmVkgoPfKGt-Tk5B1xpXje4m10ZrVqFVPeDkXPJLt2qPzkPTQ/s100/IMG_20221207_000511_300x250_copy_100x84.jpg" alt="HBO">HBO</div>
+
+<div onclick='playVideo("http://masterprotv1.com/live/3683max3688/pa665ss090/332.m3u8")'><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqIXbu8Wdj785LkBx2qEYsAXlUTvBxxBMXZMYjZQHcCpWwDAEOTnPLVMaq4gvUsBINgdkplAK-gHLsxm4uprBemp_v5lkZC8WrKTtRFtOmI6S9zFhYe0n0tXy1rpcvfKqjT711MstS_vnlU94XkRNh-nfIGu7uk8WThA-JjeTaJ495elEwn06CS6ykeQ/s531/IMG_20241120_115959.jpg" alt="HBO+"/></div>
+
+<div onclick='playVideo("http://masterprotv1.com/live/3683max3688/pa665ss090/336.m3u8")'><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi36ksiuOTeUQPXgz5PvGEQ14d5mX2xpdoJTZM4hZGl3r0MTS-IrBfkd4JT81qLLlOgVR9dIffIVyKu9sA_i3U_KiirV94u_gkXPz_e-RMh6G5iyhYn3RZYppw0SmaA0ztmHOBgsrsbsx0LXFsBgia9fX4NtTJuQtpc0IALzy8hxtXEMmMWvNcT7biUYg/s200/image_search_1732114613539.jpg" alt="HBO XTREME"/></div>  
+
+<div onclick='playVideo("http://masterprotv1.com/live/3683max3688/pa665ss090/329.m3u8")'><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQE4_lbD6P3Qzuqpioz9BOyt3KICVzR3C5BKpH9yo4lpu6GPZDtwYZnUXSiJ3WaZDDtKggylHwhIlfmkE1XqtC05dqz5fISZQFmQQ5-YxP8VAWQx117MUNfeVfas7bD11n1CtiwVJK2Q9rLf4ZLJGUwft1DfFhgSnc4ysiFSNkiv2jZP9D3FynH3kyWqU/s99/Screenshot_2023-08-19-03-42-11-799_com.brave.browser_copy_300x248_copy_100x82.jpg" alt="HBO FAMILY"/></div>
+
+<div onclick='playVideo("http://masterprotv1.com/live/3683max3688/pa665ss090/335.m3u8")'><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEic9MIUw2upIx3CnhNlyD2uFVCeB37voCJaHiw5cXTOU7LMHI1KHjdArAFIzuvyQ5epHcVroCxIX2xg48DpvH724tDg6Azv8KCl-yB35SaD59gQQwnZ5JIMNX7yUocCEcdd9FUR9fuLPk2h71Qji2VCiyski3GxFg3Jt5-e-qodtEsWZ3Y_DkhszH3TDw/s1920/image_search_1732139930200.png" alt="HBO SIGNATURE"/></div>  
+
+<div onclick='playVideo("http://masterprotv1.com/live/3683max3688/pa665ss090/344.m3u8")'><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhu0846W5rOixaSg7cnY-Uz8yQRzEWVdTo9l7eX50s2sutmor9Fb5_12XeJxrSx144DkCPU_KmZyXJQS8o6ztjPg0XLSuItXvc5XucoF7MxA0QlOCalZzVF_cFwhVpLXrv2ZpD-SGsmh61i6K4YXrUv8-ZqnuzPaSHRHj6W_gciEBGP8Wbm0B6T3sgoAk8/s100/image_downloader_1693061092984_copy_250x250_copy_100x100.png" alt="STAR"/></div>  
+
+<div onclick='playVideo("http://masterprotv1.com/live/3683max3688/pa665ss090/320.m3u8")'><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiqP-__pKsoJsPlBs-NRXMioFBiAh7pnutW6N8zejj72lcpS75QJ69NlG0Q5db9EgwZ5Jy5XHdYkxFOWpf7STdGnpijVPX5LPF6bpgU8sBjbiYPNg7hGAIHRbqmDEG1yhfa8xuN6cxYA_-4a-WxQkrdg3DvvAnL2YcbIGycdEFLD7w3cQrAA1o0P2PbjY4/s100/image_downloader_1692254521244_copy_200x200_copy_100x100.png" alt="CINEMAX"/></div>  
+                    
+<div onclick='playVideo("http://masterprotv1.com/live/3683max3688/pa665ss090/528.m3u8")'><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjXuMNoUPZdICb1eDeQGFzAldCot4COo7YF8U_Xoy-McF3TZYHOKgH3axPd9gMF_TZXZ80wfP0DHsWa2CFng4uU5TqRtu-0POjkKGpnxirkeS-uqmCXYoXp1TcQ1xhFdGgeZraSGETv02beUZE42jdKwBAe5lHD3z9mhM7Xs3g1pcAkz9q_O51EordqXaw/s100/Screenshot_2023-10-29-05-57-56-065_la.movie6_copy_300x300_1_copy_100x100.jpg" alt="PARAMOUNT"/></div>
+
+<div onclick='playVideo("http://imagenuniversaltv.net:3771/live/iutvlive.m3u8")'><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhJuBv22xcDWAY8H6f2e5wCLoGtmbnV70g-Szn6LbndOA_-U7wncEkGoP-XnB4cqZtyfV-vS9YquvOkiqk3FfazsRvaZ_lL76VrpV6_gbOaNBL_zJMlW_xchrLGrDHdwNgGszx2-EvRg3Ce7Y4mnPcdnjJlltYV-fXl88KcshQt6_NnIYoZrngi4bxmBqE/s100/IMG_20230816_152247_copy_300x250_copy_100x83.jpg" alt="UNIVERSAL"/></div>            
+
+<div onclick='playVideo("http://masterprotv1.com/live/3683max3688/pa665ss090/315.m3u8")'><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgSF809OKxZlN0PvFM5EucXb1m6vkSkWb47BteBBXgJPJj8VM_ysxPqnfsCUDd-LN52mLJcHhN1MS5sjc84bgeD0mAxwk1vuZQZaPSdALbYh2KXDTainMdajdUbI-dG5fmnSqXe9uJmnWufipmBzWP8nUSrY14c5l30aN9f8RdeQ9kw5IfnI_IEX9OcFqg/s100/IMG_20230818_230356_copy_300x250_copy_100x83.jpg" alt="CINECANAL"/></div>   
+        
+<div onclick='playVideo("http://masterprotv1.com/live/3683max3688/pa665ss090/364.m3u8")'><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHbthT1cwu0VkTofr8PRZozip75iQcKHPJ4f55uYeqrLrfOYDHx1kl3qy5friwDfwUY6be68DjbTSitjEJgz9BVXGenMY_0ejZSznOYETF_rLAs_oYeblrPeo1Zpe_WSbLUvPV0VA6zs9COdUi4_-ILmodcaBNrfakShWSjCRgZRt7SNkzP9j5qFC9hyw/s100/IMG_20221207_000452_300x250_copy_100x84.jpg" alt="FOX"/></div>                   
+                            
+      <div onclick='playVideo("http://masterprotv1.com/live/3683max3688/pa665ss090/377.m3u8")'><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEif4VLn2Uz-rEBwPalO2GWpFtRHrZ6J8fk00upksXtQW6JiA4Qr_YK-tul5AcpAIT9vZ5JpSLcwFYKUqfIc2qTLSE6P7qSGBQPlTArJelnkq0ORWaOzkI4hq6hyb0LCwCW4wr8yKTJ-NpmxnFLKpC3Ch2sXnIjK1XaM_TuMp5Ff4TazGFjtkaSbVAuFnX8/s100/IMG_20221207_000106_300x250_copy_100x84.jpg" alt="SPACE"/></div>         
+                                 
+<div onclick='playVideo("http://masterprotv1.com/live/3683max3688/pa665ss090/341.m3u8")'><img src="https://da.gd/d8mAno" alt="TNT SERIES"/></div>           
+     
+<div onclick='playVideo("http://masterprotv1.com/live/3683max3688/pa665ss090/368.m3u8")'><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1unIvs1Fc-kwwb2E_HgRjsjBmPl3sBySFNY97SCxJHfMlwBXBhfdz5w28HVBFC6PPPNdxxPjRAM9Ni3Fl8zHaDHqtZYFJs62z-EebVb9cs6BYKBxBPXHAvyl-hL_ZCgRKN0QogjJAIgAlltPCbS7qC196N8jm_LNt0sNcGb6dpSvwJDkVCD83FPtang/s500/image_search_1732140136692.png" alt="GOLDEN EDGE"/></div>  
+
+<div onclick='playVideo("http://masterprotv1.com/live/3683max3688/pa665ss090/370.m3u8")'><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiP2JuxsHx2Ce8VkGzwLLjapU90By5iWxLAwu41KJCPusD_ICRdOEN3GolGRbxhV4gwdP1Wt4Ni4uhzfqig5MAase65kcy7bQtqy40PJVTallsZI4yfeWjNMRRvMFUTLgGgOvEnhyphenhyphenYS946dl1kAuoHZaaWL6Kqen2W8D4iKx6MMfa8mHs_SAnWmeneDCA/s300/image_search_1732140163504.png" alt="GOLDEN PLUS"/></div>  
+
+<div onclick='playVideo("http://masterprotv1.com/live/3683max3688/pa665ss090/372.m3u8")'><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgm4HziUSbEJ0jWMG03fOy0RcxZ6RCAbobpoUeDkU37DjdtxKN_Y6QHyy1QlY7vS5WrAriAnL_oaryFuGwg2oS5qKun0GrD3c3K4VmO-Fie8EEvEUjjMqmw_cRA7imCtYYXMGjxy8JA9UGAZcaAT-rh1188fwPH1V-XwbErI4_yZexYcD58gKPDYfkaIw/s400/image_search_1732140171065.jpg" alt="GOLDEN PREMIER"/></div>
+
+<div onclick='playVideo("http://masterprotv1.com/live/3683max3688/pa665ss090/37310.m3u8")'><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgprpHet9gEG4MneC45h2iKJotJFTvOonTPUNtJshm4BQlQ31-JmBPXjpIlk7N7aNw7uXvCBvxsVQQO8qNGsHQgkZHK5W2LQqcYJsWa1u2ZYlhJbC6c-UInvMhmwST1D8clKoFOpSxyMkVgaOuJAfyFsJKNZy9rsTkZJsq-keD3ej2I5-eIPcMPiIdYfw/s480/image_search_1732140213178.jpg" alt="CASO CERRADO"/></div> 
+
+<a href="go:GAME"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgj8l5v1qa0RfLmIL8LToUuEg9SyQPfggp8zUPn4fmMOpcEa7eibSxsTlGTLC9T6V3Uyczw3Q3jIQLjVWGH6xMcnfitjiD518b3DBCj9e1LuquZSm2gjdu0hDPU-NbbXprpf6ldh2PmYew5GbL1CQRSQmQza5igyEG3EDgvP_MA_ibKnDeOX9m1R4LUKw/s1920/image_search_1732140246416.jpg" alt="GAME OF THRONES"/></a>
+
+<div onclick='playVideo("http://masterprotv1.com/live/3683max3688/pa665ss090/149079.m3u8")'><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-4BPAFAwKl1i8zbhTVS7ikZ8LMbfDiWIwNzjp23meqTNN2u06Atp1_4X00Q0mYhnMohdI9ha_GcdONbUDniCeJ9401uvcs0-J6ZvAhT1hRK6puyRrMu1eR2y6OUVyv8gT2oeJG81YIch2pzfJNYv0QNxSqLrqfpCDe39k1AIvSPlIUmp3uTtRdK44zg/s2560/image_search_1732140340415.jpg" alt="EL SEÑOR DE LOS ANILLOS"/></div>    
+
+<a href="go:ESCOBAR"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi4sl2HQzcBOLCq_zVh7N7y6c9-HDPfmmIewEXo5NbnaQgEXAlvjYFeiXi787fk4qcCWMZ8DjHaVTIi83HMufDliVtZoGXogJLl1g7RUjQKUCF0g83rQ3knyzBihuYMVcamzqqKLoEJVk7B_geWSkUe5LC_Jn7nZTZbpQ0ubLHoREx0iqB1vYxAfvYJOw/s640/image_search_1732140366807.jpg" alt="EL PATRON DEL MAL"/></a>     
+
+<div onclick='playVideo("http://masterprotv1.com/live/3683max3688/pa665ss090/34479.m3u8")'><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9GxSkf-8_PpyReEsWCku9PaEdRAyLtYuLMgBLL56hDqI0uF4e3ywxcmyqGcZa8ihp25mZnXbvLV4e8LvGgjgU2fhcT3c9IOan4K_-xqLQ9ny7GWSg82zYfrV-I3ZMbqIrwT2XBRwRwSp-sgE2Jh9KHRA9q0VmtxirRks_4mqvNw_-HsPNGQDUeqMPow/s1280/image_search_1732140383564.jpg" alt="HARRY POTTER"/></div> 
+
+<div onclick='playVideo("http://masterprotv1.com/live/3683max3688/pa665ss090/34446.m3u8")'><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwwuD3oZpHNT7DcXVHxGBRuOSNM9KdkfXvRix9W2__9_Voj9EvkcGTKr9Xsk0FokrzRA4QCIpk8i62FvdS8tScgYLosxOCOPEIgPlR_9DYR4oWOLOvjalPtyBRhqfHPraWWJQBjZ9Fva2CJLTk6tlFbenfAhlywMQLTBCr-d45QRrJEtl__OjlxIZBXw/s1200/image_search_1732140288904.jpg" alt="SIMPSONS"/></div>  
+
+<div onclick='playVideo("http://masterprotv1.com/live/3683max3688/pa665ss090/34461.m3u8")'><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUAKFA9g9QlQGoa2NmxcNnYHrnAWw5h-tQAreCS8WSqjATq6LoF9_umgGiMbjFO_nL-tc-8t5ZpYk6n_ww7fXfu_fYtjlm8hBLVs-ii8rlYDJuxLetQVhwPdgKxus4lSJMy9I5H_2rxkWpULGzcvXEo3pnuKNcih-m4aaguN6etvDVlpmluUAsOR1KGQ/s800/image_search_1732140404530.jpg" alt="RICK & MORTY"/></div> 
+
+<div onclick='playVideo("http://masterprotv1.com/live/3683max3688/pa665ss090/34467.m3u8")'><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiuNYRhQV4tvxTq_OxuFXoQPtXr6U-5Elc3lzHIInxEM6sE2wyLpXDGqE1YCrrWI0-HUt4ZCYZUuwacMPd-NILLuAWs4-bQ1jUqu_tIHQtdh6dN80pLdJ2Hs1Bj6BWn-v0AYme2EBiATDUrKdjyTiwfBfwKFJ0J5H6aF6q91QRcJLv8zrEcaWL41WtwMg/s1920/image_search_1732140313198.jpg" alt="JOHN WICK"/></div>  
+
+<div onclick='playVideo("http://masterprotv1.com/live/3683max3688/pa665ss090/34474.m3u8")'><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiNKz5nhEDEmBKdjTisxffWlyl3teVOonnGbE_0juiAplVVOBHw2CrYkZpLZBuYm2chhLx9rh1onQy3lEPU4o-wzkkpFHsMiKahgU2BOQDKql1U0XmbzoTvDTTypK-jSKI5d9j6OWY5a_E4lhV-Q_RgJY7ID0PmuDOQPZUn_z2bizbYSzU8xl3dWIPl56M/s100/image_downloader_1670412178106_300x250_copy_100x84.jpg" alt="SOUTH PARK"/></div>  
+
+<div onclick='playVideo("http://masterprotv1.com/live/3683max3688/pa665ss090/34476.m3u8")'><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj7gnnJeDFhFw-C3xYOzcisviahAxqBTR65xMGpRgBsjkQPt7kIb9K9LSRw2ruAev2ckszYvJnb8ZU60QNryCBnAaR_ezIJR1Au3v8FgbM0Iurp_b23J3kCpXL8e0QOd3rUzSlKLqiXkmGSQoAZ5qwvgLz0Qik3guupSdNJ9ShzMSNi_NlfGoSmosuCZQ/s1024/image_search_1732140431818.jpg" alt="MATRIX"/></div>   
+
+<a href="go:ALF"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjyIHhNN0YQ5VM6Ad2Zj4v73NoQ7EIGx6ivisM4LLTgswA5-UL-hOp5anZHwuwAMwtP-NAGshu1mGWN8HbQfuZ4SThMU64lqcmRsAgjJYngAFTIDwYDufpLZZOdQvoDadYIG3ctZGQ2vEt7EkXmFpUOiaJPR6xKr6P5-btkukHSefjrMALrdB9juuyRyQ/s1920/image_search_1732140440837.jpg" alt="ALF"/></a>    
+
+<div onclick='playVideo("http://masterprotv1.com/live/3683max3688/pa665ss090/37319.m3u8")'><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiIZZUcSkgd14l1ZoEAQ3Fqe025iis3NAdE7l-L_9dHsP-XK5pssXExC81bLkaRb-0dtFmzUcHlyWZayG5hwCF_mLtBdfQat8wfetTwfI0x6wUOFMfhAA0FrbEX1GQ_nsKvxm1bYpycJpPGZesd5lBQqexD9TsphP5WFjaWUMTM8jTfvAm575rEM-2nCKc/s100/image_downloader_1692152838670_copy_200x200_copy_100x100.jpg" alt="FUTURAMA"/></div> 
+
+<a href="go:CINEMA-M"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhRiuLXtl5Agsp3A_JbgovmCsydrwKH5RmYFnpRjY4MKp36y48GlQAPspfeSNwYs_B0pekzo4b6ZOfhZj8HkERUwBwM0BFKrdr3VXn-bMdjEZZF5N35yrUlXKRdrUDr2YoxRDI8KVaZk2vs7ukVYzv8NhdMskImm7A-pUr2lPIFAYFwPfldhc6bjSj-zQ/s1344/image_search_1732140503453.png" alt="CINEMA MARVEL"/></a>
+
+<div onclick='playVideo("http://masterprotv1.com/live/3683max3688/pa665ss090/196533.m3u8")'><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsJyN7OyA-8hAtu2mV4YWn25THiihdyH26hIa_Wgw4VVRtExL3W72rQnUnQsaLobb0tw1_YSh2USmYEN4wFqelMbd_rYPKMlY4ZCvrgL668wiJtyXGvI7ezC-oMhvByoJryhU3miGeV5yC7AMVPWw7LwzHH6BWCOvuD1gP1enXdbCm-EJ_jxnbmVsMCg/s626/image_search_1732140642196.jpg" alt="CINEMA MIX"/></div>
+
+<a href="go:HAPPY"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhofxiTX9Z0d9jiNWy1tGb592zoXklKmsAkmICYawCIQE3DeaZquAg9MzX193F98aEh3C_Aenun8eTLwaC-3GAgWwOEgBi-zVg_60RUx7wc7sM_eVry2FAUSRA4ybuJcQa2qqaS_NNSW9GxIumY27ROHoyYbvbN9daIjyu-SbGAunVfJnPyubgPp8v7Fw/s1200/image_search_1732140588794.jpg" alt="CINEMA HAPPY.M"/></a>
+
+<a href="go:CINEMA-D"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUtz9MsfSvvs3CcZa88gA90CUCPL6Z16JWL6FEeoCkh6w3g3FqHhGH3xTExXQ5BTxuCzCWFfsCWsqOJF7RCpeUfEn1QI6qHmzEWJPu_LkmJkBOT0JDjKRfvAwNClBqm3hwtg5_Q7I7iOa7DrNZj81beb4Y94j1TUcmitmS2QCNFD4RGo2Ih81Wy4Ks4MQ/s100/image_downloader_1692247280540_copy_300x250_copy_100x84.jpg" alt="CINEMA DISNEY"/></a>
+
+<a href="go:CINEMA-DC"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQhcwrSgqWe1-OJwz-5x92O30VQZQHug4YZlUV-oCOF6HedYuwSjZnszf3ZKU5vni7notGwiKqsVJtwJFBCssfT17-BnHj7mb0UBvpU7EADtFbL1ZxW4-R2ne5zUaipc_aMz_eBAAAUvv0DjIpZSiPf-EyKct4loO8UusE6zV3blr8mjaa4R2eWqmS9g/s1000/image_search_1732140541434.jpg" alt="CINEMA DC"/></a>            
+
+<a href="go:MR-BEAN"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiZvWq2XghWPQF72aKN3aiEdIl9qyIzlLI__qGZCgidLCjbCR82cQg-9ZLttG6CjuX3uBfLLu4Hq6d-ofZrLQ0XY11gpTnwwcLZNeDz9HOE8YvehhNALO7Pl7X8p0pSLREAEAtfGh14Z7kefwH7NKALgaOJbQOuoGO6RQl3MDaXM2sXBaUh-oKPjlUW3w/s1920/image_search_1732140482383.jpg" alt="MR BEAN"/></a>
+
+<div onclick='playVideo("http://masterprotv1.com/live/3683max3688/pa665ss090/37325.m3u8")'><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2GdjG7FsLR0FXTsH5Dit7_EtxeYftyw2k_ee1Sp0SuU0OneVOdgAl8IO-H9hNsp7CedZGYHl_BbRVDRVadALmRpCDgT5Lfmap5S1KAypodhocjIXhGZGyfsaBi6TZGVEOqcepiyr7XC0NVMN2xPo8Xv9JBCGNAxkIOFK5jcSbWE_vHOwpM2Ephr4ETg/s2000/image_search_1732140455140.png" alt="LA HORA PICO"/></div>     
+          </div>          
+        </div>
+      </div>
+          </center>               
+<audio autoplay src="https://cdn-cf.vidyard.com/uploads/3940821/govideo/e554dde0-90c7-11ee-8ba3-df4e4260a155.mp4"></audio>
+
+<script>
+   var player = videojs('Vid');
+        
+    function playVideo(videoUrl) {
+<!-- Cambiar la fuente del video -->
+      player.src({ src: videoUrl, type: "application/x-mpegURL" });      
+            player.play(); 
+};
+</script>   
+
+          <!-- HORIZONTAL -->
+
+<script>
+       function Handle() {
+            var Orientation = (window.innerWidth > window.innerHeight) ? evento() : invento();            
+};
+
+        function evento() {
+    var style = document.createElement('style');
+   style.innerHTML = `
+<style>
+#All {
+    display: flex;
+}
+#Vid {
+    position: relative;
+    top: 0;
+    left: -60vh;
+    width: 40%;
+    margin-top: 0px;    
+    height: 90vh;
+    border-radius: 10px;       
+}
+#Grid {
+    position: relative;
+    top: -85vh;
+    left: 60vh;
+    width: 40%;
+    gap: 10px;
+    height: 85vh;
+    display: grid;
+    overflow-y: auto;
+    flex-direction: column;
+    grid-template-columns: repeat(4, 1fr);
+}
+.contenedor{
+    margin-top: 5vh;
+    margin-left: -1vh;       
+}
+h6 {
+    top: -2vh;
+    left: -60vh;
+    position: relative;
+}
+</style>     
+`;        document.head.append(style);
+} 
+
+       function invento() {
+   var style = document.createElement('style');
+   style.innerHTML = `
+<style>
+#All {
+    display: flex;
+}
+#Vid {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 3vh;    
+    height: 30vh;
+    border-radius: 10px;       
+}
+#Grid {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    gap: 10px;
+    height: 50vh;
+    display: grid;
+    overflow-y: auto;
+    flex-direction: column;
+    grid-template-columns: repeat(4, 1fr);
+}
+.contenedor{
+    margin-top: 5vh;
+    margin-left: -1vh;       
+}
+h6 {
+    top: 0;
+    left: 0;
+    position: relative;
+}
+</style>   
+`;        document.head.append(style);
+}
+
+ window.addEventListener("resize", Handle);
+
+  <!-- Llama a la función al cargar la página para establecer el estado inicial -->
+      Handle();
+</script>
+
+<script>
+Grid.onclick = function(event) {
+  var target = event.target;
+  
+  if (target.tagName === 'IMG') {
+   H.textContent = target.alt; 
+  } else if (target.tagName === 'A') {
+   H.textContent = target.textContent.trim(); 
+  }
+};
+</script>
+
+</body>
+</html>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                               
